@@ -82,6 +82,46 @@ h1{
 }
 /* Sorting Container Ends */
 
+/* Organization Container Starts */
+
+.organization-container{
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.card{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-image{
+  width: 100%;
+}
+
+.card-text{
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  top: -35px;
+  right: 20px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  box-shadow: 0 0 2px #000;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+/* Organization Container Ends */
+
 /* Queries Begin */
 @media (min-width: 640px){
 
