@@ -10,7 +10,6 @@
 
     <title>Baltimore Black Techies</title>
 
-
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -43,22 +42,73 @@
     <link href="css/landing-page.min.css" rel="stylesheet">
 
     <!-- Custom styles for Baltimore Black Techies landing page. -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/community.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   </head>
 
   <body>
 
+
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Baltimore Black Techies</a>
-        <!-- <a class="btn btn-primary" href="#">Sign In</a> -->
-      </div>
+        <div class="navbar-logo">
+          <a class="navbar-brand" href="#">Baltimore Black Techies</a>
+        </div>
+        <div class="navbar-links">
+            <a class="about" href="about.html">About</a>
+            <a class="community active" href="community.html">Community</a>
+            <a class="projects" href="projects.html">Projects</a>
+            <a class="events" href="events.html">Events</a>
+            <a class="join" href="join.html">Join</a>
+        </div>
     </nav>
+    <!-- Navigation -->
 
-    <!-- Masthead -->
-    
+    <!-- Hero Shot -->
+    <div class="hero-shot">
+      <h1>COMMUNITY EVENTS</h1>
+    </div>
+    <!-- Hero Shot -->
+
+
+    <div class="sorting-container">  <!-- sorting container starts -->
+          <p class="tagline">Choose from the options below and find the community that's right for you:</p>
+          <div  id="filter-button">Filter</div>
+
+                <div id="toggle-filter">
+                      <p class=input-title>Zipcode:</p>
+                      <input type="text" class="input-width" placeholder="Enter zipcode" name="zipcode" maxlength="12">
+
+                      <p class=input-title>Topics:</p>
+                      <select name="topics" class="input-width">
+                          <option value="robotics">Robotics</option>
+                          <option value="data-analyst">Data Analyst</option>
+                          <option value="UI-UX">UI/UX</option>
+                          <option value="web-development">Web development</option>
+                          <option value="IT">IT</option>
+                          <option value="machine-learning">Machine Learning/Data Sites</option>
+                      </select>
+
+                      <p class=input-title>Skill Level:</p>
+                      <select name="skill" class="input-width">
+                          <option value="beginner">Beginner</option>
+                          <option value="intermediate">Intermediate</option>
+                          <option value="expert">Expert</option>
+                      </select>
+
+                      <p class=input-title>Price:</p>
+                      <div class="button-container">
+                        <button class="price">$</button>
+                        <button class="price">$$</button>
+                        <button class="price">$$$</button>
+                      </div>
+              </div>
+
+    </div>  <!-- sorting container ends -->
+
+
     <!-- Footer -->
     <footer class="footer bg-light">
       <div class="container">
@@ -103,7 +153,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="./js/functions.js"></script>
   </body>
 
 </html>
