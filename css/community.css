@@ -9,19 +9,53 @@ header.masthead {
 
 
 /* Nav Menu Starts */
+
 .navbar{
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.navbar-links a{
-  display: block;
-  text-align: center;
-  color: #000;
+.navbar-brand{
+  font-size: 1.2rem;
 }
 
-.navbar-links a.active{
+.navbar-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-icon{
+  font-size: 1.5rem;
+}
+
+.navlinks{
+  display: none;
+  width: 100%;
+}
+
+#about{
+  border-top: 1px solid #CCCCCC;
+}
+
+.navlinks a{
+  width: 100%;
+  display: inline-block;
+  color: #000;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #CCCCCC;
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
+
+.navlinks a:hover{
+  background-color: #F1F1F1;
+  color: blue;
+}
+
+.navlinks a.active{
   color: blue;
 }
 /* Nav Menu Ends */
