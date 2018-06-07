@@ -77,39 +77,44 @@
 
 
     <div class="sorting-container">  <!-- sorting container starts -->
-          <div  id="filter-button">Filter</div>
+      <div class="sorting-menu">
+          <div class="search">
+            <input type="search" class="search-input" name="search" placeholder="search keyword..." size="25">
+            <i class="fas fa-search"></i>
+          </div>
+          <div id="filter-button">Filter</div>
+      </div>
 
-                <div id="toggle-filter">
-                      <p class="tagline">Choose from the options below and find the community that's right for you:</p>
+      <div id="toggle-filter">
+          <p class="tagline">Choose from the options below and find the community that's right for you:</p>
 
-                      <p class=input-title>Zipcode:</p>
-                      <input type="text" class="input-width" placeholder="Enter zipcode" name="zipcode" maxlength="12">
+          <p class=input-title>Zipcode:</p>
+          <input type="text" class="input-width" placeholder="Enter zipcode" name="zipcode" maxlength="12">
 
-                      <p class=input-title>Topics:</p>
-                      <select name="topics" class="input-width">
-                          <option value="robotics">Robotics</option>
-                          <option value="data-analyst">Data Analyst</option>
-                          <option value="UI-UX">UI/UX</option>
-                          <option value="web-development">Web development</option>
-                          <option value="IT">IT</option>
-                          <option value="machine-learning">Machine Learning/Data Sites</option>
-                      </select>
+          <p class=input-title>Topics:</p>
+          <select name="topics" class="input-width">
+              <option value="robotics">Robotics</option>
+              <option value="data-analyst">Data Analyst</option>
+              <option value="UI-UX">UI/UX</option>
+              <option value="web-development">Web development</option>
+              <option value="IT">IT</option>
+              <option value="machine-learning">Machine Learning/Data Sites</option>
+          </select>
 
-                      <p class=input-title>Skill Level:</p>
-                      <select name="skill" class="input-width">
-                          <option value="beginner">Beginner</option>
-                          <option value="intermediate">Intermediate</option>
-                          <option value="expert">Expert</option>
-                      </select>
+          <p class=input-title>Skill Level:</p>
+          <select name="skill" class="input-width">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
+          </select>
 
-                      <p class=input-title>Price:</p>
-                      <div class="button-container">
-                        <button class="price">$</button>
-                        <button class="price">$$</button>
-                        <button class="price">$$$</button>
-                      </div>
-              </div>
-
+          <p class=input-title>Price:</p>
+          <div class="button-container">
+            <button class="price">$</button>
+            <button class="price">$$</button>
+            <button class="price">$$$</button>
+          </div>
+      </div> <!-- toggle container ends -->
     </div>  <!-- sorting container ends -->
 
     <div class="organization-container">
