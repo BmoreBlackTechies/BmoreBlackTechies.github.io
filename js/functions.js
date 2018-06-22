@@ -3,7 +3,7 @@ $("#filter-button").click(function(){
 }); // slide down toggle for sorting options
 
 $(".navbar-icon").click(function(){
-  $(".navlinks").slideToggle();
+  $(".navlinksMobile").slideToggle();
 }); // slide down toggle for navigation
 
 $("#search-input").click(function(){
@@ -14,6 +14,18 @@ $("#search-input").focusout(function(){
   $(".fa-search").css("color", "grey");
 }); // search icon turns grey when you click outside of input field
 
-$("#search-button").on("click", function(){
- alert("this is a test");
+  $("#search-button").on("click", function(){
+    var value = $("#search-input").val().toLowerCase();
+  $(".card").filter(function(){
+    var isfound = $(this).text().toLowerCase().indexOf(value) > -1;
+    if(isfound) {
+        $(this).toggle(isfound);
+    } else {
+      alert('not found');
+    }
+
+
+    console.log(value, "This is a test");
+
+ });
 });

@@ -5,8 +5,8 @@ header.masthead {
   -o-background-size: cover;
   background-size: cover;
 }
-/* Community page css */
 
+/* Community page css */
 
 /* Nav Menu Starts */
 
@@ -14,136 +14,162 @@ header.masthead {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 0;
+  position: relative;
 }
 
 .navbar-brand{
   font-size: 1.2rem;
 }
 
-.navbar-menu{
+.mobileIcons{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding: .5rem 1rem;
 }
 
 .navbar-icon{
+  display: block;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.navlinks{
+.navlinksDesktop{
   display: none;
+}
+
+.navlinksMobile{
+  display: none;
+  background-color: #6E6A70;
   width: 100%;
+  position:absolute;
+  top: 60px;
+  z-index: 1;
 }
 
-#about{
-  border-top: 1px solid #CCCCCC;
-}
-
-.navlinks a{
+.navlinksMobile a{
   width: 100%;
   display: inline-block;
-  color: #000;
-  padding: .5rem 1rem;
-  border-bottom: 1px solid #CCCCCC;
-  background-color: #f8f9fa;
+  color: #fff;
+  padding: 1rem;
   text-decoration: none;
 }
 
-.navlinks a:hover{
-  background-color: #F1F1F1;
-  color: blue;
+.navlinksMobile a:hover, .navlinksMobile a.active{
+  color: #FCAA06;
 }
 
-.navlinks a.active{
-  color: blue;
+#join{
+  background-color: #FCAA06;
+  color: white;
+}
+
+#join:hover{
+  color: black;
 }
 /* Nav Menu Ends */
 
 /* Hero Shot Starts */
 
 .hero-shot{
-  width: 100%;
-  padding: 4rem 0;
-  background-color: #D8D8D8;
+  background-size: cover;
+background-position-x: center;
+background-position-y: center;
+width: 100%;
+  height: 200px;
+  padding: 3rem 0;
+  background-image:url("../img/community.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
+.hero-shot__title{
+  color: white;
+  font-size: 1.7rem;
+  letter-spacing: .1rem;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
   margin: 0;
 }
+
 /* Hero Shot Ends */
 
 /* Sorting Container Starts */
 
-.sorting-container{
-  padding: 1rem 1rem 0 1rem;
-}
-
-.sorting-menu{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.search {
-  position: relative;
-  width: 75%;
-}
-
-#search-input {
-  text-indent: 20px;
-  border-radius: 10px;
-  padding: .5rem;
-  outline-offset: 0;
-  border: 1px solid #B5B5B5;
-  width: 100%;
-}
-
-#search-input:focus {
-  outline: none;
-  box-shadow: 1px 1px 5px #000;
-}
-
-.search .fa-search {
-  position: absolute;
-  top: 15px;
-  left: 7px;
-  font-size: 15px;
-  color: grey;
-}
-
-#search-button{
-  background-color: blue;
-  border-radius: 10px;
-  padding: .5rem;
-  color: white;
-  width: 25%;
-  text-align: center;
-  margin-left: .5rem;
-}
-
-#search-button:hover{
-  background-color: #4352FF;
-  cursor: pointer;
-}
-
-div#filter-button{
-  text-align: center;
+.wrapper{
+  width: 90%;
   margin: 0 auto;
-  width: 100%;
-  background: linear-gradient(white, #E8E6E6);
-  border: 1px solid #C8C7C7;
-  border-radius: 10px;
-  padding: .5rem 0;
-  cursor: pointer;
+  margin-top: 1rem;
 }
 
-div#filter-button:active{
-  transform: translateY(4px);
+.page-number{
+  font-size: .7rem;
+  margin-bottom: .5rem;
+}
+
+
+#search-keywords, #search-zipcode{
+    position: relative;
+    width: 100%;
+}
+
+input#keywords, input#zipcode {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #CCCCCC;
+    background: #f1f1f1;
+    text-indent: 30px;
+    float: left;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+input#keywords{
+    width: 100%;
+}
+
+input#zipcode{
+    width: 68%;
+}
+
+#keywords-icon, #zipcode-icon{
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  color: #757575;
+}
+
+.search-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#filter-button {
+  border-radius: 5px;
+    float: right;
+    width: 30%;
+    padding: 10px;
+    background: #188AE9;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.tagline{
+  text-align: center;
+}
+
+#filter-button:hover {
+    background: #0b7dda;
 }
 
 #toggle-filter{
@@ -151,19 +177,12 @@ div#filter-button:active{
   padding-bottom: 1rem;
 }
 
-.tagline{
-  text-align: center;
-  margin-top: 1rem;
-}
 
 .input-title{
   font-weight: bold;
   margin: 1rem 0 0 0;
 }
 
-.input-width{
-  width: 100%;
-}
 /* Sorting Container Ends */
 
 /* Organization Container Starts */
@@ -171,14 +190,16 @@ div#filter-button:active{
 .organization-container{
   display: flex;
   flex-direction: column;
-  padding: .5rem 1rem;
+  padding: 0 1rem .5rem 1rem;
+  margin-top: -1rem;
+  background-color: #F7F7F7;
 }
 
 .card{
   margin: 0 auto;
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #BCBBBB;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
 }
 
 .card-image{
@@ -220,16 +241,87 @@ a.view-details:hover{
 /* Queries Begin */
 @media (min-width: 640px){
 
-  .container{
-  flex-direction: row;
+
+  .hero-shot{
+    height: 350px;
   }
 
-  .inner-container{
-    display: flex;
+  .hero-shot__title{
+    font-size: 3rem;
+  }
+
+}
+
+@media (min-width: 768px){
+
+  .navbar{
     flex-direction: row;
     justify-content: space-between;
-    width: 45%;
   }
+
+  .navlinksMobile, .navbar-icon{
+    display: none !important;
+  }
+
+  .mobileIcons{
+  width: 50%;
+  }
+
+  .navlinksDesktop{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  width: 50%;
+  }
+
+  .navlinksDesktop a{
+    width: auto;
+    text-align: center;
+    color: #000;
+    margin-left:2rem;
+    text-decoration: none;
+  }
+
+  .navlinksDesktop a.active, .navlinksDesktop a:hover{
+    color: #FFAB03;
+  }
+
+  #join{
+    padding: 1rem 1.5rem;
+  }
+
+.search-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#search-keywords{
+    width: 55%;
+}
+
+#search-zipcode{
+    width: 44%;
+}
+
+.tagline{
+  text-align: left;
+  margin: 1.5rem 0 .5rem 0;
+}
+
+}
+
+@media (min-width: 1024px){
+.hero-shot__title{
+  font-size: 4rem;
+}
+
+.hero-shot{
+  height: 350px;
+
+}
 
 }
 /* Queries End */
