@@ -8,6 +8,12 @@ header.masthead {
 
 /* Community page css */
 
+.wrapper{
+  width: 90%;
+  margin: 1rem auto;
+}
+
+
 /* Nav Menu Starts */
 
 .navbar{
@@ -23,7 +29,7 @@ header.masthead {
   font-size: 1.2rem;
 }
 
-.mobileIcons{
+.icons{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,7 +37,7 @@ header.masthead {
   padding: .5rem 1rem;
 }
 
-.navbar-icon{
+.icons_menu{
   display: block;
   font-size: 1.5rem;
   cursor: pointer;
@@ -47,7 +53,7 @@ header.masthead {
   width: 100%;
   position:absolute;
   top: 60px;
-  z-index: 1;
+  z-index: 10;
 }
 
 .navlinksMobile a{
@@ -60,6 +66,7 @@ header.masthead {
 
 .navlinksMobile a:hover, .navlinksMobile a.active{
   color: #FCAA06;
+  background-color: #5C585F;
 }
 
 #join{
@@ -68,6 +75,7 @@ header.masthead {
 }
 
 #join:hover{
+  background-color: #E59A03;
   color: black;
 }
 /* Nav Menu Ends */
@@ -76,9 +84,9 @@ header.masthead {
 
 .hero-shot{
   background-size: cover;
-background-position-x: center;
-background-position-y: center;
-width: 100%;
+  background-position-x: center;
+  background-position-y: center;
+  width: 100%;
   height: 200px;
   padding: 3rem 0;
   background-image:url("../img/community.jpg");
@@ -87,32 +95,31 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top:5px solid #FCAA06
 }
 
 .hero-shot__title{
   color: white;
   font-size: 1.7rem;
   letter-spacing: .1rem;
-  text-align: center;
   font-weight: bold;
   margin: 0;
 }
 
 /* Hero Shot Ends */
 
-/* Sorting Container Starts */
+/* Search Starts */
 
-.wrapper{
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 1rem;
+.tagline{
+  text-align: center;
 }
 
-.page-number{
-  font-size: .7rem;
-  margin-bottom: .5rem;
+.search-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 
 #search-keywords, #search-zipcode{
     position: relative;
@@ -123,104 +130,114 @@ input#keywords, input#zipcode {
     padding: 10px;
     font-size: 17px;
     border: 1px solid #CCCCCC;
-    background: #f1f1f1;
     text-indent: 30px;
-    float: left;
     border-radius: 5px;
     margin-bottom: 1rem;
-}
-
-input#keywords{
     width: 100%;
 }
 
-input#zipcode{
-    width: 68%;
-}
-
-#keywords-icon, #zipcode-icon{
+.search-icons{
   position: absolute;
   top: 16px;
   left: 10px;
   color: #757575;
 }
 
-.search-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-#filter-button {
-  border-radius: 5px;
-    float: right;
-    width: 30%;
+.button {
+    border-radius: 5px;
     padding: 10px;
-    background: #188AE9;
-    color: white;
     font-size: 17px;
     cursor: pointer;
 }
 
-.tagline{
-  text-align: center;
+.button:focus {
+      outline: none;
+}
+
+#filter-button, #update-button{
+  width: 100%;
+  background-color: #188AE9;
+  color: white;
 }
 
 #filter-button:hover {
     background: #0b7dda;
 }
 
-#toggle-filter{
+#update-button{
+  display: block;
+  background-color: rgba(24, 138, 233, 0);
+  border: 2px solid #188AE9;
+  color: #188AE9;
+  width: 50%;
+  border-radius: 35px;
+  margin: 0 auto;
+  margin-top: .5rem;
+}
+
+#update-button:hover{
+  background-color: #188AE9;
+  color: white;
+}
+
+#search-button{
   display: none;
-  padding-bottom: 1rem;
 }
 
+.filter-container-desktop{
+  display: none;
+  width: 15%;
+}
 
-.input-title{
+.filter-container-mobile{
+  display: none;
+  margin: 2rem 0;
+}
+
+.filter-title{
   font-weight: bold;
-  margin: 1rem 0 0 0;
+  margin-bottom: 0;
 }
 
-/* Sorting Container Ends */
+.dropdown{
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Search Ends */
+
 
 /* Organization Container Starts */
 
-.organization-container{
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem .5rem 1rem;
-  margin-top: -1rem;
-  background-color: #F7F7F7;
+.page-number{
+  font-size: .7rem;
+  margin-bottom: .5rem;
 }
 
 .card{
-  margin: 0 auto;
   margin-bottom: 1rem;
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
 }
 
 .card-image{
-  width: 100%;
+  display: none;
+  width: 30%;
+  height: 160px;
 }
 
 .card-text{
-  padding: 1rem 1.5rem;
-  position: relative;
+  padding: 1rem;
 }
 
-.logo{
-  position: absolute;
-  top: -35px;
-  right: 20px;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  box-shadow: 0 0 2px #000;
+.card-text p{
+  margin-bottom: 0;
 }
+
 
 h2{
   font-size: 1.3rem;
@@ -241,13 +258,72 @@ a.view-details:hover{
 /* Queries Begin */
 @media (min-width: 640px){
 
-
   .hero-shot{
     height: 350px;
   }
 
   .hero-shot__title{
     font-size: 3rem;
+  }
+
+  .organization-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card-container{
+    width: 80%;
+  }
+
+  .filter-container-desktop{
+    display: block;
+    width: 15%;
+  }
+
+  .card-image{
+    display: block;
+  }
+
+  ul.filter-list{
+    list-style: none;
+    padding: 0;
+    color: #0F7FD0;
+    cursor: pointer;
+    font-size: .8rem;
+  }
+
+  ul.filter-list li:hover{
+    color: #000;
+  }
+
+  .search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #search-keywords{
+      width: 55%;
+  }
+
+  #search-zipcode{
+      width: 44%;
+  }
+
+  input#zipcode{
+      width: 68%;
+  }
+
+  #filter-button{
+    display: none;
+  }
+
+  #search-button{
+    display: block;
+      float: right;
+    width: 30%;
   }
 
 }
@@ -259,11 +335,11 @@ a.view-details:hover{
     justify-content: space-between;
   }
 
-  .navlinksMobile, .navbar-icon{
+  .navlinksMobile, .icons_menu{
     display: none !important;
   }
 
-  .mobileIcons{
+  .icons{
   width: 50%;
   }
 
@@ -292,23 +368,10 @@ a.view-details:hover{
     padding: 1rem 1.5rem;
   }
 
-.search-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#search-keywords{
-    width: 55%;
-}
-
-#search-zipcode{
-    width: 44%;
-}
 
 .tagline{
   text-align: left;
-  margin: 1.5rem 0 .5rem 0;
+  margin-bottom: .5rem;
 }
 
 }
@@ -320,7 +383,10 @@ a.view-details:hover{
 
 .hero-shot{
   height: 350px;
+}
 
+.wrapper{
+  width: 900px;
 }
 
 }

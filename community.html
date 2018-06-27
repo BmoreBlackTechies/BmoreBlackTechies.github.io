@@ -53,10 +53,9 @@
 
     <!-- Navigation -->
         <nav class="navbar navbar-light static-top">
-          <!-- <div class="desktopNav"> -->
-                <div class="mobileIcons">
+                <div class="icons">
                   <a class="navbar-brand" href="#">Baltimore Black Techies</a>
-                  <div class="navbar-icon"><i class="fas fa-bars"></i></div>
+                  <div class="icons_menu"><i class="fas fa-bars"></i></div>
                 </div>
                 <div class="navlinksMobile">
                     <a id="about" href="about.html">About</a>
@@ -72,65 +71,122 @@
                     <a id="events" href="events.html">Events</a>
                     <a id="join" href="join.html">Join</a>
                 </div>
-            <!-- </div> -->
         </nav>
 
     <!-- Navigation -->
 
     <!-- Hero Shot -->
-    <hr style="border-top:5px solid #FCAA06;margin: 0;">
     <div class="hero-shot">
       <p class="hero-shot__title">Community Events</p>
     </div>
-    <hr style="border-top:4px solid #FCAA06;margin: 0;">
     <!-- Hero Shot -->
 
-
-<div class="wrapper">
+  <!-- Search -->
+    <div class="wrapper">
           <p class="tagline">Find a community that's right for you:</p>
-        <form action="/action_page.php">
           <div class="search-container">
               <div id="search-keywords">
-                <i id="keywords-icon" class="fa fa-search"></i>
+                <i class="fa fa-search search-icons"></i>
                 <input id="keywords" type="text" placeholder="Search keywords.." name="search">
               </div>
               <div id="search-zipcode">
-                <i id="zipcode-icon" class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-marker-alt search-icons"></i>
                 <input  id="zipcode" type="text" placeholder="Enter zipcode" name="zipcode" maxlength="12">
-                <button id="filter-button">Filter</button>
+                <button id="search-button" class="button">Search</button>
               </div>
+          </div>
+
+        <button id="filter-button" class="button">filter</button>
+
+        <div class="filter-container-mobile">
+            <p class="filter-title">Topic</p>
+            <select name="topic" class="dropdown">
+              <option value="robotics">Robotics</option>
+              <option value="data-analyst">Data Analyst</option>
+              <option value="UI">UI/UX</option>
+              <option value="web-dev">Web Development</option>
+              <option value="IT">IT</option>
+              <option value="machine-learning">Machine Learning/Data Sites</option>
+            </select>
+
+            <p class="filter-title">Price</p>
+            <select name="price" class="dropdown">
+              <option value="free">Free</option>
+              <option value="$">$</option>
+              <option value="$$">$$</option>
+              <option value="$$$">$$$</option>
+            </select>
+
+            <p class="filter-title">Skill Level</p>
+            <select name="skill" class="dropdown">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
+            </select>
+
+            <button id="update-button" class="button">Update</button>
+        </div>
+
+    </div>
+  <!-- Search -->
+
+  <!-- organizations -->
+    <div style="padding: 1rem 0; background-color: #F2F2F2;">
+      <div class="wrapper">
+        <div class="organization-container">
+            <div class="filter-container-desktop">
+              <p class="filter-title">Topic</p>
+              <ul class="filter-list">
+                <li>Robotics</li>
+                <li>Data Analyst</li>
+                <li>UI/UX</li>
+                <li>Web Development</li>
+                <li>IT</li>
+                <li>Machine Learning/<br>Data Sites</li>
+              </ul>
+
+              <p class="filter-title" style="margin-top: 2rem;">Price</p>
+              <ul class="filter-list">
+                <li>Free</li>
+                <li>$</li>
+                <li>$$</li>
+                <li>$$$</li>
+              </ul>
+
+              <p class="filter-title" style="margin-top: 2rem;">Skill Level</p>
+              <ul class="filter-list">
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Expert</li>
+              </ul>
+          </div>
+
+          <div class="card-container">
+            <p class="page-number"> Page 1 of 12 organizations </p>
+              <hr style="margin: 0 0 1rem 0;">
+
+                <div class="card">
+                    <img class="card-image" src="img/bbt.jpg">
+                    <div class="card-text">
+                      <h2>Event 1</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-image" src="img/bbt.jpg">
+                    <div class="card-text">
+                      <h2> Event 2</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
+                    </div>
+                </div>
             </div>
-        </form>
 
-        <p class="page-number"> Page 1 of 12 organizations </p>
-</div>
-
-        <hr style="margin: 0 0 1rem 0;">
-
-<div class="wrapper">
-
-      <div class="card">
-          <img class="card-image" src="img/bbt.jpg">
-          <div class="card-text">
-            <div class="logo"></div>
-            <h2>Title1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. Etiam vestibulum justo leo, nec convallis diam luctus in. Sed neque purus, tempor ut tellus id, bibendum convallis justo. Phasellus lacinia quis libero eu maximus.<p>
-            <a href="" class="view-details">VIEW DETAILS</a>
-          </div>
+        </div>
       </div>
+    </div>
 
-      <div class="card">
-          <img class="card-image" src="img/bbt.jpg">
-          <div class="card-text">
-            <div class="logo"></div>
-            <h2>Title2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. Etiam vestibulum justo leo, nec convallis diam luctus in. Sed neque purus, tempor ut tellus id, bibendum convallis justo. Phasellus lacinia quis libero eu maximus.<p>
-            <a href="" class="view-details">VIEW DETAILS</a>
-          </div>
-      </div>
-
-</div>
-
+  <!-- organizations -->
 
     <!-- Footer -->
     <footer class="footer bg-light">
