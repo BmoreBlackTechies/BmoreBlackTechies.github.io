@@ -279,6 +279,16 @@ a.view-details:hover{
   color: #188AE9;
 }
 
+.fa-meetup{
+  font-size: 2.3rem;
+  color: #FD9F03;
+  transition: .2s solid ease-in-out;
+}
+
+.fa-meetup:hover{
+  color: #EA9200;
+}
+
 /* Footer Container Ends */
 
 /* Queries Begin */
