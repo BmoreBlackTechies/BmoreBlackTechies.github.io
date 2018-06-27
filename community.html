@@ -53,18 +53,21 @@
 
     <!-- Navigation -->
         <nav class="navbar navbar-light static-top">
+              <div id="navbar-wrapper" class="wrapper">
                 <div class="icons">
                   <a class="navbar-brand" href="#">Baltimore Black Techies</a>
                   <div class="icons_menu"><i class="fas fa-bars"></i></div>
                 </div>
-                <div class="navlinksMobile">
+                <div class="navlinksDesktop">
                     <a id="about" href="about.html">About</a>
                     <a id="community" class="active" href="community.html">Community</a>
                     <a id="projects" href="projects.html">Projects</a>
                     <a id="events" href="events.html">Events</a>
                     <a id="join" href="join.html">Join</a>
                 </div>
-                <div class="navlinksDesktop">
+              </div>
+
+                <div class="navlinksMobile">
                     <a id="about" href="about.html">About</a>
                     <a id="community" class="active" href="community.html">Community</a>
                     <a id="projects" href="projects.html">Projects</a>
@@ -75,63 +78,65 @@
 
     <!-- Navigation -->
 
+    <!-- Search -->
+    <section class="section1">
+      <div class="wrapper">
+            <div class="search-container">
+                <div id="search-keywords">
+                  <i class="fa fa-search search-icons"></i>
+                  <input id="keywords" type="text" placeholder="Search keywords.." name="search">
+                </div>
+                <div id="search-zipcode">
+                  <i class="fas fa-map-marker-alt search-icons"></i>
+                  <input  id="zipcode" type="text" placeholder="Enter zipcode" name="zipcode" maxlength="12">
+                  <button id="search-button" class="button">Search</button>
+                </div>
+            </div>
+
+          <button id="filter-button" class="button">filter</button>
+
+          <div class="filter-container-mobile">
+              <p class="filter-title">Topic</p>
+              <select name="topic" class="dropdown">
+                <option value="robotics">Robotics</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="UI">UI/UX</option>
+                <option value="web-dev">Web Development</option>
+                <option value="IT">IT</option>
+                <option value="machine-learning">Machine Learning/Data Sites</option>
+              </select>
+
+              <p class="filter-title">Price</p>
+              <select name="price" class="dropdown">
+                <option value="free">Free</option>
+                <option value="$">$</option>
+                <option value="$$">$$</option>
+                <option value="$$$">$$$</option>
+              </select>
+
+              <p class="filter-title">Skill Level</p>
+              <select name="skill" class="dropdown">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Expert</option>
+              </select>
+
+              <button id="update-button" class="button">Update</button>
+          </div>
+
+      </div>
+    </section>
+    <!-- Search -->
+
     <!-- Hero Shot -->
     <div class="hero-shot">
       <p class="hero-shot__title">Community Events</p>
     </div>
     <!-- Hero Shot -->
 
-  <!-- Search -->
-    <div class="wrapper">
-          <p class="tagline">Find a community that's right for you:</p>
-          <div class="search-container">
-              <div id="search-keywords">
-                <i class="fa fa-search search-icons"></i>
-                <input id="keywords" type="text" placeholder="Search keywords.." name="search">
-              </div>
-              <div id="search-zipcode">
-                <i class="fas fa-map-marker-alt search-icons"></i>
-                <input  id="zipcode" type="text" placeholder="Enter zipcode" name="zipcode" maxlength="12">
-                <button id="search-button" class="button">Search</button>
-              </div>
-          </div>
-
-        <button id="filter-button" class="button">filter</button>
-
-        <div class="filter-container-mobile">
-            <p class="filter-title">Topic</p>
-            <select name="topic" class="dropdown">
-              <option value="robotics">Robotics</option>
-              <option value="data-analyst">Data Analyst</option>
-              <option value="UI">UI/UX</option>
-              <option value="web-dev">Web Development</option>
-              <option value="IT">IT</option>
-              <option value="machine-learning">Machine Learning/Data Sites</option>
-            </select>
-
-            <p class="filter-title">Price</p>
-            <select name="price" class="dropdown">
-              <option value="free">Free</option>
-              <option value="$">$</option>
-              <option value="$$">$$</option>
-              <option value="$$$">$$$</option>
-            </select>
-
-            <p class="filter-title">Skill Level</p>
-            <select name="skill" class="dropdown">
-              <option value="beginner">Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="expert">Expert</option>
-            </select>
-
-            <button id="update-button" class="button">Update</button>
-        </div>
-
-    </div>
-  <!-- Search -->
-
   <!-- organizations -->
-    <div style="padding: 1rem 0; background-color: #F2F2F2;">
+
+  <section class="section2">
       <div class="wrapper">
         <div class="organization-container">
             <div class="filter-container-desktop">
@@ -180,11 +185,18 @@
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
                     </div>
                 </div>
-            </div>
 
+                <div class="card">
+                    <img class="card-image" src="img/bbt.jpg">
+                    <div class="card-text">
+                      <h2>Event 3</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
+                    </div>
+                </div>
+          </div>
         </div>
       </div>
-    </div>
+  </section>
 
   <!-- organizations -->
 

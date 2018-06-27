@@ -1,24 +1,30 @@
 $("#filter-button").click(function(){
   $(".filter-container-mobile").slideToggle();
-}); // slide down toggle for sorting options
+}); // click filter button and filter options show
 
 $(window).resize(function () {
 if($(window).width() >= 640){
   $(".filter-container-mobile").hide();
-}
+} // the  mobile filter options will disappear on screen sizes above 640
 });
 
-$(".navbar-icon").click(function(){
+$(".icons_menu").click(function(){
   $(".navlinksMobile").slideToggle();
-}); // slide down toggle for navigation
+}); // click on the mobile Navigation menu and the navigation links will drop down
 
-$("#search-input").click(function(){
-  $(".fa-search").css("color", "blue");
-}); // search icon turns blue when you click on input field
+$("#keywords").click(function(){
+  $(".fa-search").css("color", "#188AE9");
+    $("#keywords").focusout(function(){
+      $(".fa-search").css("color", "grey");
+    });
+}); // click in the keywords input field and the icon will turn blue
 
-$("#search-input").focusout(function(){
-  $(".fa-search").css("color", "grey");
-}); // search icon turns grey when you click outside of input field
+$("#zipcode").click(function(){
+  $(".fa-map-marker-alt").css("color", "#188AE9");
+    $("#zipcode").focusout(function(){
+      $(".fa-map-marker-alt").css("color", "grey");
+    });
+}); // click in the zipcode input field and the icon will turn blue
 
   $("#search-button").on("click", function(){
     var value = $("#keywords").val().toLowerCase();
@@ -30,6 +36,5 @@ $("#search-input").focusout(function(){
     } else {
       alert('not found');
     }
-
  });
 });

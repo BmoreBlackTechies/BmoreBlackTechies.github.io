@@ -10,17 +10,18 @@ header.masthead {
 
 .wrapper{
   width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
+
+section{
+  padding: 1rem 0;
+}
+
 
 
 /* Nav Menu Starts */
 
 .navbar{
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   padding: 0;
   position: relative;
 }
@@ -34,7 +35,7 @@ header.masthead {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: .5rem 0;
 }
 
 .icons_menu{
@@ -52,7 +53,7 @@ header.masthead {
   background-color: #6E6A70;
   width: 100%;
   position:absolute;
-  top: 60px;
+  top: 55px;
   z-index: 10;
 }
 
@@ -66,18 +67,13 @@ header.masthead {
 
 .navlinksMobile a:hover, .navlinksMobile a.active{
   color: #FCAA06;
-  background-color: #5C585F;
 }
 
 #join{
-  background-color: #FCAA06;
+  background-color: #FD9F03;
   color: white;
 }
 
-#join:hover{
-  background-color: #E59A03;
-  color: black;
-}
 /* Nav Menu Ends */
 
 /* Hero Shot Starts */
@@ -95,7 +91,6 @@ header.masthead {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top:5px solid #FCAA06
 }
 
 .hero-shot__title{
@@ -109,6 +104,10 @@ header.masthead {
 /* Hero Shot Ends */
 
 /* Search Starts */
+
+.section1{
+  background-color: #EAEAEA;
+}
 
 .tagline{
   text-align: center;
@@ -124,6 +123,7 @@ header.masthead {
 #search-keywords, #search-zipcode{
     position: relative;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 input#keywords, input#zipcode {
@@ -132,8 +132,11 @@ input#keywords, input#zipcode {
     border: 1px solid #CCCCCC;
     text-indent: 30px;
     border-radius: 5px;
-    margin-bottom: 1rem;
     width: 100%;
+}
+
+input#keywords:focus, input#zipcode:focus {
+  outline: none;
 }
 
 .search-icons{
@@ -144,6 +147,7 @@ input#keywords, input#zipcode {
 }
 
 .button {
+  border: none;
     border-radius: 5px;
     padding: 10px;
     font-size: 17px;
@@ -151,17 +155,25 @@ input#keywords, input#zipcode {
 }
 
 .button:focus {
-      outline: none;
+    outline: none;
 }
 
-#filter-button, #update-button{
-  width: 100%;
-  background-color: #188AE9;
+#filter-button, #search-button{
+  background-color: #FF9F03;
   color: white;
+  transition: all .2s ease-in-out;
 }
 
-#filter-button:hover {
-    background: #0b7dda;
+#filter-button{
+    width: 100%;
+}
+
+#filter-button:hover, #search-button:hover {
+    background: #EA9200;
+}
+
+#search-button{
+  display: none;
 }
 
 #update-button{
@@ -173,6 +185,7 @@ input#keywords, input#zipcode {
   border-radius: 35px;
   margin: 0 auto;
   margin-top: .5rem;
+  transition: all .2s ease-in-out;
 }
 
 #update-button:hover{
@@ -180,9 +193,6 @@ input#keywords, input#zipcode {
   color: white;
 }
 
-#search-button{
-  display: none;
-}
 
 .filter-container-desktop{
   display: none;
@@ -191,7 +201,7 @@ input#keywords, input#zipcode {
 
 .filter-container-mobile{
   display: none;
-  margin: 2rem 0;
+  margin-top: 1rem;
 }
 
 .filter-title{
@@ -209,6 +219,10 @@ input#keywords, input#zipcode {
 
 /* Organization Container Starts */
 
+.section2{
+  padding: 1.5rem 0;
+}
+
 .page-number{
   font-size: .7rem;
   margin-bottom: .5rem;
@@ -217,7 +231,6 @@ input#keywords, input#zipcode {
 .card{
   margin-bottom: 1rem;
   width: 100%;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   display: flex;
   flex-direction: row;
   justify-content:center;
@@ -245,7 +258,7 @@ h2{
 
 a.view-details{
   cursor: pointer;
-  color:blue;
+  color:#188AE9;
   text-decoration: none;
 }
 
@@ -254,6 +267,19 @@ a.view-details:hover{
 }
 
 /* Organization Container Ends */
+
+/* Footer Container Starts */
+
+.footer a{
+  color: black;
+}
+
+.footer a:hover{
+  text-decoration: none;
+  color: #188AE9;
+}
+
+/* Footer Container Ends */
 
 /* Queries Begin */
 @media (min-width: 640px){
@@ -264,6 +290,38 @@ a.view-details:hover{
 
   .hero-shot__title{
     font-size: 3rem;
+  }
+
+  .search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #search-keywords, #search-zipcode{
+      margin-bottom: 0;
+  }
+
+  #search-keywords{
+      width: 55%;
+  }
+
+  #search-zipcode{
+      width: 44%;
+  }
+
+  input#zipcode{
+      width: 68%;
+  }
+
+  #search-button{
+    display: block;
+    float: right;
+    width: 30%;
+  }
+
+  #filter-button{
+    display: none;
   }
 
   .organization-container{
@@ -294,45 +352,22 @@ a.view-details:hover{
     font-size: .8rem;
   }
 
+  ul.filter-list li{
+    margin: .5rem 0;
+  }
+
   ul.filter-list li:hover{
     color: #000;
-  }
-
-  .search-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  #search-keywords{
-      width: 55%;
-  }
-
-  #search-zipcode{
-      width: 44%;
-  }
-
-  input#zipcode{
-      width: 68%;
-  }
-
-  #filter-button{
-    display: none;
-  }
-
-  #search-button{
-    display: block;
-      float: right;
-    width: 30%;
   }
 
 }
 
 @media (min-width: 768px){
 
-  .navbar{
+  #navbar-wrapper{
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .navlinksMobile, .icons_menu{
@@ -340,43 +375,56 @@ a.view-details:hover{
   }
 
   .icons{
-  width: 50%;
+    width: 40%;
+  }
+
+  #join{
+    background-color: white;
+    border: 1.5px solid #188AE9;
+    color: #188AE9;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+  }
+
+  #join:hover{
+    color: white;
+    background-color: #177FD6;
   }
 
   .navlinksDesktop{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #fff;
-  width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    width: 60%;
   }
 
   .navlinksDesktop a{
     width: auto;
     text-align: center;
     color: #000;
-    margin-left:2rem;
+    margin-left:2.5rem;
     text-decoration: none;
   }
 
   .navlinksDesktop a.active, .navlinksDesktop a:hover{
-    color: #FFAB03;
+    color: #188AE9;
   }
 
   #join{
-    padding: 1rem 1.5rem;
+    padding: .2rem 1.5rem;
   }
 
-
-.tagline{
-  text-align: left;
-  margin-bottom: .5rem;
-}
+  .tagline{
+    text-align: left;
+    margin-bottom: .5rem;
+  }
 
 }
 
 @media (min-width: 1024px){
+
 .hero-shot__title{
   font-size: 4rem;
 }
@@ -386,7 +434,7 @@ a.view-details:hover{
 }
 
 .wrapper{
-  width: 900px;
+  width: 1000px;
 }
 
 }
