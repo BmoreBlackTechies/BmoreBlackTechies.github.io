@@ -444,6 +444,14 @@ a.view-details:hover{
 }
 
 .wrapper{
+  width: 900px;
+}
+
+}
+
+@media (min-width: 1100px){
+
+.wrapper{
   width: 1000px;
 }
 
