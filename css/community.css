@@ -26,8 +26,10 @@ section{
   position: relative;
 }
 
-.navbar-brand{
+.icons__brand:link, .icons__brand:visited{
   font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
 }
 
 .icons{
@@ -38,17 +40,17 @@ section{
   padding: .5rem 0;
 }
 
-.icons_menu{
+.icons__menu{
   display: block;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.navlinksDesktop{
+.nav__desktop{
   display: none;
 }
 
-.navlinksMobile{
+.nav__mobile{
   display: none;
   background-color: #6E6A70;
   width: 100%;
@@ -57,7 +59,7 @@ section{
   z-index: 10;
 }
 
-.navlinksMobile a{
+.nav__mobile a{
   width: 100%;
   display: inline-block;
   color: #fff;
@@ -65,7 +67,7 @@ section{
   text-decoration: none;
 }
 
-.navlinksMobile a:hover, .navlinksMobile a.active{
+.nav__mobile a:hover, .nav__mobile a.active{
   color: #FCAA06;
 }
 
@@ -78,7 +80,7 @@ section{
 
 /* Hero Shot Starts */
 
-.hero-shot{
+.heroImg{
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -93,7 +95,7 @@ section{
   align-items: center;
 }
 
-.hero-shot__title{
+.heroImg__title{
   color: white;
   font-size: 1.7rem;
   letter-spacing: .1rem;
@@ -113,14 +115,14 @@ section{
   text-align: center;
 }
 
-.search-container{
+.section1__search{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#search-keywords, #search-zipcode{
+#sesection1__search--keywords, #section1__search--zipcode{
     position: relative;
     width: 100%;
     margin-bottom: 1rem;
@@ -158,25 +160,25 @@ input#keywords:focus, input#zipcode:focus {
     outline: none;
 }
 
-#filter-button, #search-button{
+#section1__filter, #section1__search--button{
   background-color: #FF9F03;
   color: white;
   transition: all .2s ease-in-out;
 }
 
-#filter-button{
+#section1__filter{
     width: 100%;
 }
 
-#filter-button:hover, #search-button:hover {
+#section1__filter:hover, #section1__search--button:hover {
     background: #EA9200;
 }
 
-#search-button{
+#section1__search--button{
   display: none;
 }
 
-#update-button{
+#section__filter--title{
   display: block;
   background-color: rgba(24, 138, 233, 0);
   border: 2px solid #188AE9;
@@ -188,23 +190,23 @@ input#keywords:focus, input#zipcode:focus {
   transition: all .2s ease-in-out;
 }
 
-#update-button:hover{
+#section__filter--title:hover{
   background-color: #188AE9;
   color: white;
 }
 
 
-.filter-container-desktop{
+.section2__filter--desktop{
   display: none;
   width: 15%;
 }
 
-.filter-container-mobile{
+.section1__filter--mobile{
   display: none;
   margin-top: 1rem;
 }
 
-.filter-title{
+.section__filter--title{
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -237,17 +239,17 @@ input#keywords:focus, input#zipcode:focus {
   align-items: center;
 }
 
-.card-image{
+.card__image{
   display: none;
   width: 30%;
   height: 160px;
 }
 
-.card-text{
+.card__text{
   padding: 1rem;
 }
 
-.card-text p{
+.card__text p{
   margin-bottom: 0;
 }
 
@@ -294,29 +296,29 @@ a.view-details:hover{
 /* Queries Begin */
 @media (min-width: 640px){
 
-  .hero-shot{
+  .heroImg{
     height: 350px;
   }
 
-  .hero-shot__title{
+  .heroImg__title{
     font-size: 3rem;
   }
 
-  .search-container{
+  .section1__search{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  #search-keywords, #search-zipcode{
+  #sesection1__search--keywords, #section1__search--zipcode{
       margin-bottom: 0;
   }
 
-  #search-keywords{
+  #sesection1__search--keywords{
       width: 55%;
   }
 
-  #search-zipcode{
+  #section1__search--zipcode{
       width: 44%;
   }
 
@@ -324,33 +326,33 @@ a.view-details:hover{
       width: 68%;
   }
 
-  #search-button{
+  #section1__search--button{
     display: block;
     float: right;
     width: 30%;
   }
 
-  #filter-button{
+  #section1__filter{
     display: none;
   }
 
-  .organization-container{
+  .section2__organizations{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
   }
 
-  .card-container{
+  .section2__cards{
     width: 80%;
   }
 
-  .filter-container-desktop{
+  .section2__filter--desktop{
     display: block;
     width: 15%;
   }
 
-  .card-image{
+  .card__image{
     display: block;
   }
 
@@ -374,13 +376,13 @@ a.view-details:hover{
 
 @media (min-width: 768px){
 
-  #navbar-wrapper{
+  #navbar__wrapper{
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .navlinksMobile, .icons_menu{
+  .nav__mobile, .icons__menu{
     display: none !important;
   }
 
@@ -401,7 +403,7 @@ a.view-details:hover{
     background-color: #177FD6;
   }
 
-  .navlinksDesktop{
+  .nav__desktop{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -410,7 +412,7 @@ a.view-details:hover{
     width: 60%;
   }
 
-  .navlinksDesktop a{
+  .nav__desktop a{
     width: auto;
     text-align: center;
     color: #000;
@@ -418,7 +420,7 @@ a.view-details:hover{
     text-decoration: none;
   }
 
-  .navlinksDesktop a.active, .navlinksDesktop a:hover{
+  .nav__desktop a.active, .nav__desktop a:hover{
     color: #188AE9;
   }
 
@@ -435,11 +437,11 @@ a.view-details:hover{
 
 @media (min-width: 1024px){
 
-.hero-shot__title{
+.heroImg__title{
   font-size: 4rem;
 }
 
-.hero-shot{
+.heroImg{
   height: 350px;
 }
 

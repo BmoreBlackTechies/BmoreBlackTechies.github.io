@@ -53,12 +53,12 @@
 
     <!-- Navigation -->
         <nav class="navbar navbar-light static-top">
-              <div id="navbar-wrapper" class="wrapper">
+              <div id="navbar__wrapper" class="wrapper">
                 <div class="icons">
-                  <a class="navbar-brand" href="#">Baltimore Black Techies</a>
-                  <div class="icons_menu"><i class="fas fa-bars"></i></div>
+                  <a class="icons__brand" href="index.html">Baltimore Black Techies</a>
+                  <div class="icons__menu"><i class="fas fa-bars"></i></div>
                 </div>
-                <div class="navlinksDesktop">
+                <div class="nav__desktop">
                     <a id="about" href="about.html">About</a>
                     <a id="community" class="active" href="community.html">Community</a>
                     <a id="projects" href="projects.html">Projects</a>
@@ -67,7 +67,7 @@
                 </div>
               </div>
 
-                <div class="navlinksMobile">
+                <div class="nav__mobile">
                     <a id="about" href="about.html">About</a>
                     <a id="community" class="active" href="community.html">Community</a>
                     <a id="projects" href="projects.html">Projects</a>
@@ -81,22 +81,23 @@
     <!-- Search -->
     <section class="section1">
       <div class="wrapper">
-            <div class="search-container">
-                <div id="search-keywords">
+            <div class="section1__search">
+                <div id="sesection1__search--keywords">
                   <i class="fa fa-search search-icons"></i>
                   <input id="keywords" type="text" placeholder="Search keywords.." name="search">
                 </div>
-                <div id="search-zipcode">
+                <div id="section1__search--zipcode">
                   <i class="fas fa-map-marker-alt search-icons"></i>
                   <input  id="zipcode" type="text" placeholder="Enter zipcode" name="zipcode" maxlength="12">
-                  <button id="search-button" class="button">Search</button>
+                  <button id="section1__search--button" class="button">Search</button>
                 </div>
             </div>
 
-          <button id="filter-button" class="button">filter</button>
+          <button id="section1__filter" class="button">filter</button>
 
-          <div class="filter-container-mobile">
-              <p class="filter-title">Topic</p>
+          <div class="section1__filter--mobile">
+              <p class="section__filter--title">Topic</p>
+
               <select name="topic" class="dropdown">
                 <option value="robotics">Robotics</option>
                 <option value="data-analyst">Data Analyst</option>
@@ -106,7 +107,8 @@
                 <option value="machine-learning">Machine Learning/Data Sites</option>
               </select>
 
-              <p class="filter-title">Price</p>
+              <p class="section__filter--title">Price</p>
+
               <select name="price" class="dropdown">
                 <option value="free">Free</option>
                 <option value="$">$</option>
@@ -114,14 +116,15 @@
                 <option value="$$$">$$$</option>
               </select>
 
-              <p class="filter-title">Skill Level</p>
+              <p class="section__filter--title">Skill Level</p>
+
               <select name="skill" class="dropdown">
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="expert">Expert</option>
               </select>
 
-              <button id="update-button" class="button">Update</button>
+              <button id="section__filter--title" class="button">Update</button>
           </div>
 
       </div>
@@ -129,8 +132,8 @@
     <!-- Search -->
 
     <!-- Hero Shot -->
-    <div class="hero-shot">
-      <p class="hero-shot__title">Community Events</p>
+    <div class="heroImg">
+      <p class="heroImg__title">Community Events</p>
     </div>
     <!-- Hero Shot -->
 
@@ -138,9 +141,10 @@
 
   <section class="section2">
       <div class="wrapper">
-        <div class="organization-container">
-            <div class="filter-container-desktop">
-              <p class="filter-title">Topic</p>
+        <div class="section2__organizations">
+            <div class="section2__filter--desktop">
+              <p class="section__filter--title">Topic</p>
+
               <ul class="filter-list">
                 <li>Robotics</li>
                 <li>Data Analyst</li>
@@ -150,7 +154,8 @@
                 <li>Machine Learning/<br>Data Sites</li>
               </ul>
 
-              <p class="filter-title" style="margin-top: 2rem;">Price</p>
+              <p class="section__filter--title" style="margin-top: 2rem;">Price</p>
+
               <ul class="filter-list">
                 <li>Free</li>
                 <li>$</li>
@@ -158,7 +163,8 @@
                 <li>$$$</li>
               </ul>
 
-              <p class="filter-title" style="margin-top: 2rem;">Skill Level</p>
+              <p class="section__filter--title" style="margin-top: 2rem;">Skill Level</p>
+
               <ul class="filter-list">
                 <li>Beginner</li>
                 <li>Intermediate</li>
@@ -166,29 +172,29 @@
               </ul>
           </div>
 
-          <div class="card-container">
+          <div class="section2__cards">
             <p class="page-number"> Page 1 of 12 organizations </p>
               <hr style="margin: 0 0 1rem 0;">
 
                 <div class="card">
-                    <img class="card-image" src="img/bbt.jpg">
-                    <div class="card-text">
+                    <img class="card__image" src="img/bbt.jpg">
+                    <div class="card__text">
                       <h2>Event 1</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card-image" src="img/bbt.jpg">
-                    <div class="card-text">
+                    <img class="card__image" src="img/bbt.jpg">
+                    <div class="card__text">
                       <h2> Event 2</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img class="card-image" src="img/bbt.jpg">
-                    <div class="card-text">
+                    <img class="card__image" src="img/bbt.jpg">
+                    <div class="card__text">
                       <h2>Event 3</h2>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit ex a lobortis fringilla. Proin sed odio nec orci mattis fermentum non at libero. <a href="" class="view-details">View Details...</a><p>
                     </div>

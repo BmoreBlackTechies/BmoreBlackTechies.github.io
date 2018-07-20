@@ -1,15 +1,15 @@
-$("#filter-button").click(function(){
-  $(".filter-container-mobile").slideToggle();
+$("#section1__filter").click(function(){
+  $(".section1__filter--mobile").slideToggle();
 }); // click filter button and filter options show
 
 $(window).resize(function () {
 if($(window).width() >= 640){
-  $(".filter-container-mobile").hide();
+  $(".section1__filter--mobile").hide();
 } // the  mobile filter options will disappear on screen sizes above 640
 });
 
-$(".icons_menu").click(function(){
-  $(".navlinksMobile").slideToggle();
+$(".icons__menu").click(function(){
+  $(".nav__mobile").slideToggle();
 }); // click on the mobile Navigation menu and the navigation links will drop down
 
 $("#keywords").click(function(){
@@ -26,15 +26,6 @@ $("#zipcode").click(function(){
     });
 }); // click in the zipcode input field and the icon will turn blue
 
-  $("#search-button").on("click", function(){
-    var value = $("#keywords").val().toLowerCase();
-    console.log(value);
-  $(".card").filter(function(){
-    var isfound = $(this).text().toLowerCase().indexOf(value) > -1;
-    if(isfound) {
-        $(this).toggle(isfound);
-    } else {
-      alert('not found');
-    }
- });
-});
+  $("#section1__search--button").on("click", function(){
+
+}); //click on the search button to sort events by keywords
