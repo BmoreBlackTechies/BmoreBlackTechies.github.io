@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+}
+
 header.masthead {
   background: url(../img/bbt.jpg) no-repeat center center;
   -webkit-background-size: cover;
@@ -55,7 +59,7 @@ section{
   background-color: #6E6A70;
   width: 100%;
   position:absolute;
-  top: 55px;
+  top: 45px;
   z-index: 10;
 }
 
@@ -85,7 +89,7 @@ section{
   background-position-x: center;
   background-position-y: center;
   width: 100%;
-  height: 200px;
+  height: 100px;
   padding: 3rem 0;
   background-image:url("../img/community.jpg");
   background-repeat: no-repeat;
@@ -111,15 +115,13 @@ section{
   background-color: #EAEAEA;
 }
 
-.tagline{
-  text-align: center;
-}
-
 .section1__search{
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 #sesection1__search--keywords, #section1__search--zipcode{
@@ -296,40 +298,32 @@ a.view-details:hover{
 /* Queries Begin */
 @media (min-width: 640px){
 
+  .wrapper{
+    width: 95%;
+  }
+
   .heroImg{
-    height: 350px;
+    height: 200px;
   }
 
   .heroImg__title{
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .section1__search{
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   #sesection1__search--keywords, #section1__search--zipcode{
-      margin-bottom: 0;
-  }
-
-  #sesection1__search--keywords{
-      width: 55%;
-  }
-
-  #section1__search--zipcode{
-      width: 44%;
-  }
-
-  input#zipcode{
-      width: 68%;
+      width: 38%;
+        margin-bottom: 0;
   }
 
   #section1__search--button{
     display: block;
     float: right;
-    width: 30%;
+    width: 20%;
   }
 
   #section1__filter{
@@ -376,6 +370,14 @@ a.view-details:hover{
 
 @media (min-width: 768px){
 
+  .heroImg{
+    height: 250px;
+  }
+
+  .heroImg__title{
+    font-size: 3rem;
+  }
+
   #navbar__wrapper{
     display: flex;
     flex-direction: row;
@@ -396,6 +398,7 @@ a.view-details:hover{
     color: #188AE9;
     border-radius: 20px;
     transition: all .2s ease-in-out;
+    padding: .2rem 1.5rem;
   }
 
   #join:hover{
@@ -424,25 +427,29 @@ a.view-details:hover{
     color: #188AE9;
   }
 
-  #join{
-    padding: .2rem 1.5rem;
+  #sesection1__search--keywords{
+      width: 42%;
   }
 
-  .tagline{
-    text-align: left;
-    margin-bottom: .5rem;
+  #section1__search--zipcode{
+    width: 40%;
+  }
+
+  #section1__search--button{
+    width: 15%;
   }
 
 }
 
 @media (min-width: 1024px){
 
-.heroImg__title{
-  font-size: 4rem;
-}
+  .heroImg{
+    height: 280px;
+  }
 
-.heroImg{
-  height: 350px;
+
+.heroImg__title{
+  font-size: 3.5rem;
 }
 
 .wrapper{
